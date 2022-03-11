@@ -17,15 +17,22 @@ class MyStoryViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let aboutMeVC = segue.destination as? AboutMeViewController else { return }
-        aboutMeVC.user = user
-        guard let educationVC = segue.destination as? EducationViewController else { return }
-        educationVC.user = user
-        guard let sportVC = segue.destination as? SportViewController else { return }
-        sportVC.user = user
-        guard let developmentVC = segue.destination as? DevelopmentViewController else { return }
-        developmentVC.user = user
-        guard let appleVC = segue.destination as? AppleViewController else { return }
-        appleVC.user = user
+        switch segue.identifier {
+        case "aboutMe":
+            guard let aboutMeVC = segue.destination as? AboutMeViewController else { return }
+            aboutMeVC.user = user
+        case "education":
+            guard let educationVC = segue.destination as? EducationViewController else { return }
+            educationVC.user = user
+        case "sport":
+            guard let sportVC = segue.destination as? SportViewController else { return }
+            sportVC.user = user
+        case "development":
+            guard let developmentVC = segue.destination as? DevelopmentViewController else { return }
+            developmentVC.user = user
+        default:
+            guard let appleVC = segue.destination as? AppleViewController else { return }
+            appleVC.user = user
+        }
     }
 }

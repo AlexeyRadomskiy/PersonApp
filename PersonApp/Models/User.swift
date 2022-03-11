@@ -23,12 +23,14 @@ struct UserInfo {
     let name: String
     let surname: String
     let age: Int
+    let photo: String
     
     static func getUserInfo() -> UserInfo{
         UserInfo(
             name: "Alexey",
             surname: "Radomskiy",
-            age: 23
+            age: 23,
+            photo: "ProfilePhoto"
         )
     }
 }

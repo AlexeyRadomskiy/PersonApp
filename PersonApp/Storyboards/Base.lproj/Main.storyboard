@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PersonApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="PersonApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
         <!--Profile-->
         <scene sceneID="0o0-RQ-CYm">
             <objects>
-                <viewController id="P7k-fw-WOP" sceneMemberID="viewController">
+                <viewController id="P7k-fw-WOP" customClass="ProfileViewController" customModule="PersonApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hvG-35-JpP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,7 +142,7 @@
         <!--My story-->
         <scene sceneID="QiQ-fX-omp">
             <objects>
-                <viewController id="ll3-qi-7Wd" sceneMemberID="viewController">
+                <viewController id="ll3-qi-7Wd" customClass="CVViewController" customModule="PersonApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b0U-L1-tcu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="2408" y="472"/>
         </scene>
-        <!--View Controller-->
+        <!--Data Person View Controller-->
         <scene sceneID="p9C-2a-5xP">
             <objects>
-                <viewController id="xHR-99-Jmb" sceneMemberID="viewController">
+                <viewController id="xHR-99-Jmb" customClass="DataPersonViewController" customModule="PersonApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0E3-Rq-eAP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,11 +203,11 @@
             </objects>
             <point key="canvasLocation" x="806" y="81"/>
         </scene>
-        <!--VC-->
+        <!--CV-->
         <scene sceneID="i1u-bc-ym0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ULw-Ro-tYs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="VC" image="note.text" catalog="system" id="Iim-cK-euk"/>
+                    <tabBarItem key="tabBarItem" title="CV" image="note.text" catalog="system" id="Iim-cK-euk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gwj-Gj-Hwe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

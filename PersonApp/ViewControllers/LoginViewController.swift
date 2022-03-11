@@ -22,12 +22,12 @@ class LoginViewController: UIViewController {
             if let profileVC = viewController as? ProfileViewController {
                 profileVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
-                let cvViewController = navigationVC.topViewController as! CVViewController
-                cvViewController.user = user
+                let myStoryVC = navigationVC.topViewController as! MyStoryViewController
+                myStoryVC.user = user
             }
         }
     }
-    
+
     @IBAction func loginTappedButton() {
         guard let inputLogin = userNameTextField.text,
               !inputLogin.isEmpty,

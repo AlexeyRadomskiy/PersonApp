@@ -25,7 +25,7 @@ class SportViewController: UIViewController {
         createToolbar()
     }
     
-    func choiceTypeOfSports() {
+    private func choiceTypeOfSports() {
         
         let elementPicker = UIPickerView()
         elementPicker.delegate = self
@@ -38,12 +38,19 @@ class SportViewController: UIViewController {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done",
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(dismissKeyboard))
+        let doneButton = UIBarButtonItem(
+            barButtonSystemItem: .done,
+            target: self,
+            action: #selector(dismissKeyboard)
+        )
         
-        toolbar.setItems([doneButton], animated: true)
+        let flexBarButton = UIBarButtonItem(
+            barButtonSystemItem: .flexibleSpace,
+            target: nil,
+            action: nil
+        )
+        
+        toolbar.setItems([flexBarButton, doneButton], animated: true)
         toolbar.isUserInteractionEnabled = true
         
         typeOfSportTextField.inputAccessoryView = toolbar
@@ -57,15 +64,15 @@ class SportViewController: UIViewController {
 extension SportViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        1
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return user.sport.type.count
+        user.sport.type.count
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return user.sport.type[row]
+        user.sport.type[row]
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
